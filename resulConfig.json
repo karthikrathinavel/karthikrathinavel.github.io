@@ -1,0 +1,33 @@
+{
+    "serviceWorkerFileConfig": {
+        "path": "firebase-messaging-sw.js"
+    },
+    "notificationPrompt": true,
+    "notificationPromptConfig": {
+        "icon": "",
+        "ctaAlignment": "right",
+        "primaryCtaText": "Allow",
+        "primaryCtaTextColor": "#fff",
+        "primaryCtaBgColor": "#333",
+        "secondaryCtaEnable": true,
+        "secondaryCtaText": "No thanks",
+        "secondaryCtaTextColor": "#333",
+        "secondaryCtaBgColor": "#fff",
+        "bgColor": "#999",
+        "title": "Welcome!",
+        "content": "We would like to show updates, please allow!"
+    },
+    "pushNotification": {
+        "pushConfig": {
+            "apiKey": "AIzaSyDHKBy6bEC8YFG3ae2RiPmXlsfa7R8wl6g",
+            "authDomain": "webanalytics-a31b6.firebaseapp.com",
+            "projectId": "webanalytics-a31b6",
+            "storageBucket": "webanalytics-a31b6.appspot.com",
+            "messagingSenderId": "795171808898",
+            "appId": "1:795171808898:web:33d577246a6193c36c769b",
+            "measurementId": "G-RVZMH81TNP"
+        },
+        "pushHeaderKey": "AAAAuSPu5oI:APA91bHjb36v6oX8FrveqdbJ-Ph5vGXOBU9dJFy2tNH3KCpagj3ChTE-urtckqZYAvD2TzeqbHrusMdGC13Znm314igzZ4t5F_FcShwgzRXNLY5EbKyAZwPZc-ylpmsYg3YeHTsbGFPR"
+    },
+    "securePushNotification": "a13eyJwdXNoQ29uZmlnIjp7ImFwaUtleSI6IkFJemFTeUFaNTJ2d2kwSnlRaTktSThyc2J2ZWZkYnVac1V4YVc1dyIsImF1dGhEb21haW4iOiJvbmVsaW5lc2RrdGVzdC5maXJlYmFzZWFwcC5jb20iLCJwcm9qZWN0SWQiOiJvbmVsaW5lc2RrdGVzdCIsInN0b3JhZ2VCdWNrZXQiOiJvbmVsaW5lc2RrdGVzdC5hcHBzcG90LmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiNTM3NTIzMzA4ODA3IiwiYXBwSWQiOiIxOjUzNzUyMzMwODgwNzp3ZWI6NTY1NDRmNmM0ZDNhNWFlMWI2MWRhMiIsIm1lYXN1cmVtZW50SWQiOiJHLTU2UzlWNzdGVFYifSwicHVzaEhlYWRlcktleSI6IkFBQUFmU2JpeVFjOkFQQTkxYkVrTkY3SXBXdnI2Y2JTUWk0R09RbFU2TWhWQTF2TE45UlJMOXN2cU5ERDhYNGZRcFNUcTB4clRmcFVqa1RKSEpoRkxxZFM3aGdoR2dYQmpkQm9TWnN3bEtlekJ0YmI0VHNIeDhtVEZ1SnJTM2UxMzdIcS1IMmdNdDV6TWtuQjNSeHJ3V05iIn0="
+}
