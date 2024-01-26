@@ -11,6 +11,7 @@
 <body>
     <header>
         <h1>Shopping Website</h1>
+        <button onclick="sendData()"></button>
         <nav>
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
@@ -47,5 +48,14 @@
   const analytics = getAnalytics(app);
 </script>
     <script src="main.js"></script>
+    <script>
+        const eventData = {
+          event_category: 'Custom Category',
+          event_action: 'Custom Action',
+          event_label: 'Custom Label',
+          value: 42, // Optional numeric value
+        };
+        gtag('event', 'custom_event', eventData);
+    </script>
 </body>
 </html>
