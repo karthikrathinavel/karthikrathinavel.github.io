@@ -62,14 +62,15 @@
     <script>
         function sendData(){
              const eventData = {
-          event_category: 'Custom Category',
-          event_action: 'Custom Action',
-          event_label: 'Custom Label',
-          value: 42, // Optional numeric value
-        };
-        gtag('event', 'TestEvent', eventData);
-        console.log("Event data sent");   
+                  event_category: 'Custom Category',
+                  event_action: 'Custom Action',
+                  event_label: 'Custom Label',
+                  value: 42,
+             };
+            gtag('event', 'TestEvent', eventData);
+            console.log("Event data sent");   
         }
+        
     </script>
 </body>
 </html>
