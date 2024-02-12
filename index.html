@@ -73,8 +73,7 @@
         window.addEventListener('message', function(event) {
 		console.log("get message")
     		if (event.origin === 'https://logeshm05.github.io' && event.data.action === 'sendData') {
-        		var d1 = event.data.d1;
-        		var d2 = event.data.d2;
+        		var d1 = event.data;
         		console.log('Data from website1:', d1);
         		console.log('Data from website2:', d2);
     		}
