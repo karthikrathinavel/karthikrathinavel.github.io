@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="795171808898-esffb3asbi3pnqk1foj0ei1qspqji6vn.apps.googleusercontent.com">
     <link rel="stylesheet" href="styles.css">
     <title>Shopping Website</title>
     <script resulconfig="/resulconfig.json"
@@ -21,6 +22,8 @@
 <body>
     <header>
         <h1>Shopping Website</h1>
+	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+	<a href="#" onclick="signOut();">Sign out</a>
         <button onclick="sendData()">sendEvent</button>
         <nav>
             <a href="index.html">Home</a>
@@ -77,7 +80,22 @@
         		console.log('Data from website1:', d1);
     		}
 	});
-        
+
+	//google signin
+	function onSignIn(googleUser) {
+  		var profile = googleUser.getBasicProfile();
+  		console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  		console.log('Name: ' + profile.getName());
+  		console.log('Image URL: ' + profile.getImageUrl());
+  		console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+	}
+	function signOut() {
+    		var auth2 = gapi.auth2.getAuthInstance();
+    		auth2.signOut().then(function () {
+      			console.log('User signed out.');
+    		});
+  	}
+	
     </script>
 </body>
 </html>
