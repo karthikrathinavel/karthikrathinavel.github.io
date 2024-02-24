@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="795171808898-esffb3asbi3pnqk1foj0ei1qspqji6vn.apps.googleusercontent.com">
-    <link rel="stylesheet" href="styles.css">
-    <title>Shopping Website</title>
-    <script resulconfig="/resulconfig.json"
-        src="https://sdk.resu.io/handlers/f4f0811b658c45e794322f307b93c235.sdk" defer="defer"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-signin-client_id" content="795171808898-esffb3asbi3pnqk1foj0ei1qspqji6vn.apps.googleusercontent.com">
+        <link rel="stylesheet" href="styles.css">
+        <title>Shopping Website</title>
+        <script resulconfig="/resulconfig.json" src="https://sdk.resu.io/handlers/f4f0811b658c45e794322f307b93c235.sdk" defer="defer"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVZMH81TNP"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+  	    function gtag(){dataLayer.push(arguments);}
+  	    gtag('js', new Date());
+  	    gtag('config', 'G-RVZMH81TNP');
+	</script>
+	<!--Microsoft Clarity-->
+	<script type="text/javascript">
+    	    (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        	t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        	y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    	    })(window, document, "clarity", "script", "l6zjlid9w6");
+	</script>
+    </head>
+    <body>
+        <header>
+            <h1>Sample Website</h1>
+	    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+	    <a href="#" onclick="signOut();">Sign out</a>
+            <button onclick="sendData()">sendEvent</button>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+            </nav>
+        </header>
+        <main>
+            <p>Welcome to our shopping website! Explore our products and add them to your cart.</p>
+        </main>
+        <footer>
+            <p>&copy; 2024 Shopping Website</p>
+        </footer>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+  	    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  	    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+  	    // TODO: Add SDKs for Firebase products that you want to use
+  	    // https://firebase.google.com/docs/web/setup#available-libraries
+  	    // Your web app's Firebase configuration
+  	    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  	    const firebaseConfig = {
+    	        apiKey: "AIzaSyDHKBy6bEC8YFG3ae2RiPmXlsfa7R8wl6g",
+    		authDomain: "webanalytics-a31b6.firebaseapp.com",
+    		projectId: "webanalytics-a31b6",
+    		storageBucket: "webanalytics-a31b6.appspot.com",
+    		messagingSenderId: "795171808898",
+    		appId: "1:795171808898:web:33d577246a6193c36c769b",
+    		measurementId: "G-RVZMH81TNP"
+  	   };
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVZMH81TNP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  	   // Initialize Firebase
+  	   const app = initializeApp(firebaseConfig);
+  	   const analytics = getAnalytics(app);
+	</script>
+    	<script src="main.js"></script>
+      	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVZMH81TNP"></script>
+    	<script>
+            function sendData(){
+                const eventData = {
+                    event_category: 'Custom Category',
+                    event_action: 'Custom Action',
+                    event_label: 'Custom Label',
+                    value: 42,
+                };
+                gtag('event', 'TestEvent', eventData);
+                console.log("Event data sent");   
+           }
+           window.addEventListener('message', function(event) {
+	       console.log("get message")
+    	       if (event.origin === 'https://logeshm05.github.io') {
+                   var d1 = event.data;
+         	   console.log('Data from website1:', d1);
+    	       }
+	   });
 
-  gtag('config', 'G-RVZMH81TNP');
-</script>
-</head>
-<body>
-    <header>
-        <h1>Sample Website</h1>
-	<div class="g-signin2" data-onsuccess="onSignIn"></div>
-	<a href="#" onclick="signOut();">Sign out</a>
-        <button onclick="sendData()">sendEvent</button>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="cart.html">Cart</a>
-        </nav>
-    </header>
-    <main>
-        <p>Welcome to our shopping website! Explore our products and add them to your cart.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Shopping Website</p>
-    </footer>
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDHKBy6bEC8YFG3ae2RiPmXlsfa7R8wl6g",
-    authDomain: "webanalytics-a31b6.firebaseapp.com",
-    projectId: "webanalytics-a31b6",
-    storageBucket: "webanalytics-a31b6.appspot.com",
-    messagingSenderId: "795171808898",
-    appId: "1:795171808898:web:33d577246a6193c36c769b",
-    measurementId: "G-RVZMH81TNP"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-    <script src="main.js"></script>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVZMH81TNP"></script>
-    <script>
-        function sendData(){
-             const eventData = {
-                  event_category: 'Custom Category',
-                  event_action: 'Custom Action',
-                  event_label: 'Custom Label',
-                  value: 42,
-             };
-            gtag('event', 'TestEvent', eventData);
-            console.log("Event data sent");   
-        }
-        window.addEventListener('message', function(event) {
-		console.log("get message")
-    		if (event.origin === 'https://logeshm05.github.io') {
-        		var d1 = event.data;
-        		console.log('Data from website1:', d1);
-    		}
-	});
-
-	//google signin
-	function onSignIn(googleUser) {
-  		var profile = googleUser.getBasicProfile();
-  		console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  		console.log('Name: ' + profile.getName());
-  		console.log('Image URL: ' + profile.getImageUrl());
-  		console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-	}
-	function signOut() {
-    		var auth2 = gapi.auth2.getAuthInstance();
-    		auth2.signOut().then(function () {
-      			console.log('User signed out.');
-    		});
-  	}
+	   //google signin
+	   function onSignIn(googleUser) {
+  	       var profile = googleUser.getBasicProfile();
+  	       console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  	       console.log('Name: ' + profile.getName());
+  	       console.log('Image URL: ' + profile.getImageUrl());
+  	       console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+	   }
+	   function signOut() {
+    	       var auth2 = gapi.auth2.getAuthInstance();
+    	       auth2.signOut().then(function () {
+      	           console.log('User signed out.');
+    	       });
+  	   }
 	
-    </script>
-</body>
+       </script>
+    </body>
 </html>
